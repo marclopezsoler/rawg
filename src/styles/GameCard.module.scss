@@ -1,0 +1,107 @@
+.game_card {
+  max-width: 600px;
+  width: 66%;
+  max-height: 400px;
+  min-height: 200px;
+  height: 100%;
+  color: white;
+  padding: 1em;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  &:hover {
+    transform: scale(1.033);
+  }
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6px;
+
+  padding: 0;
+  margin: 0;
+
+  .icon {
+    cursor: pointer;
+    transition: 0.25s;
+    z-index: 3;
+  }
+
+  span {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s;
+
+    .icon_name {
+      position: absolute;
+      opacity: 1;
+      top: -33px;
+      text-align: center;
+
+      scale: 0;
+      transform: translateY(20px);
+
+      transition: 0.25s;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      color: black;
+
+      z-index: 2;
+
+      .icon_name_child {
+        background-color: white;
+        border-radius: 5px;
+        padding: 2.5px;
+
+        font-size: 14px;
+        font-weight: 300;
+        z-index: 2;
+      }
+
+      .icon_point {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: white;
+        bottom: -3px;
+        rotate: 45deg;
+        z-index: 1;
+      }
+    }
+
+    &:hover {
+      .icon_name {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+      }
+
+      .icon {
+        opacity: 0.75;
+      }
+    }
+  }
+}
